@@ -1,1 +1,1 @@
-This is a simplified clone of niri-ribbon but for Umbriel in Noctalia v5.  It provides a simple panel icon (simple ribbon) you can mouse hover and scroll up/down to navigate left/right in the current workspace.
+This is a simplified clone of niri-ribbon but for Umbriel in Noctalia v5.  It provides a simple (static) panel icon you can mouse hover and scroll up/down to navigate left/right in the current workspace.
