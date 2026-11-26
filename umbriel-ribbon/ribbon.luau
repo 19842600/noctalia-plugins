@@ -1,38 +1,23 @@
 --!nonstrict
-local Widget = require("@noctalia/ui/widget")
-local Icon = require("@noctalia/ui/icon")
-local Noctalia = require("@noctalia/core")
 
-local ribbonService = Noctalia.import_service("umbriel_ribbon_service")
+-- Configure static bar icon and tooltip on load
+barWidget.setGlyph("columns-2")
+barWidget.setTooltip("Scroll up/down to navigate Umbriel columns left/right")
 
-local RibbonWidgetEntry = {}
-
-function RibbonWidgetEntry.init(plugin)
-    -- Build a safe, invisible collision bounding area on the bar
-    local ribbonWidget = Widget.new({
-        name = "umbriel-ribbon-anchor",
-        tooltip = "Hover and scroll to shift layout columns",
-    })
-
-    -- Add the clean, static column icon to serve as your alignment cue
-    local staticIcon = Icon.new({
-        source = "view-column-symbolic",
-        size = 16,
-    })
-    ribbonWidget:set_child(staticIcon)
-
-    -- Map your pure wheel tracking logic
-    ribbonWidget.on_scroll = function(direction)
-        if direction == "up" then
-            ribbonService.scroll_left()
-        elseif direction == "down" then
-            ribbonService.scroll_right()
-        end
+-- Handle mouse-wheel / trackpad scroll events over the widget
+-- steps: negative = scroll up / left, positive = scroll down / right
+function onScroll(axis, steps, startsGesture)
+    if steps == 0 then
+        return
     end
 
-    -- Register the module straight to the Noctalia widget shelf
-    plugin:register_widget(ribbonWidget)
+    -- Use "window-focus-left" / "window-focus-right" to step focus across columns,
+    -- or swap to "layout-scroll-left" / "layout-scroll-right" to pan without changing focus.
+    local actionName = if steps < 0 then "window-focus-left" else "window-focus-right"
+
+    -- Fire once per wheel detent
+    local count = math.abs(steps)
+    for _ = 1, count do
+        noctalia.umbriel.action({ action = actionName })
+    end
 end
-
-return RibbonWidgetEntry
-
