@@ -3,7 +3,7 @@ id = "19842600/umbriel-ribbon"
 name = "Umbriel Ribbon"
 version = "1.0.0"
 description = "Pure mouse-wheel canvas scrolling for Umbriel via the panel bar."
-authors = "AlmostStupid"
+authors = "19842600"
 plugin_api = 28
 
 [entries]
