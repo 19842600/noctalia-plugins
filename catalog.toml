@@ -1,10 +1,10 @@
 [[plugin]]
-id          = "19842600/umbriel-ribbon"
-name        = "Umbriel Ribbon"
-version     = "1.0.0"
-plugin_api  = 28
-authors     = "19842600"
-license     = "MIT"
-icon        = "view-column-symbolic"
+id = "19842600/umbriel-ribbon"
+name = "Umbriel Ribbon"
+version = "1.0.0"
+plugin_api = 45
+author = "19842600"
+license = "MIT"
+icon = "columns-2"
 description = "Pure mouse-wheel canvas scrolling for Umbriel via the panel bar."
-tags        = ["ribbon", "umbriel", "utility"]
+tags = ["ribbon", "umbriel", "utility"]
