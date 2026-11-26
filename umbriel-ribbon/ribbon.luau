@@ -2,7 +2,6 @@
 
 -- Configure static bar icon and tooltip on load
 barWidget.setGlyph("columns-2")
-barWidget.setTooltip("Scroll up/down to navigate Umbriel columns left/right")
 
 -- Handle mouse-wheel / trackpad scroll events over the widget
 -- steps: negative = scroll up / left, positive = scroll down / right
