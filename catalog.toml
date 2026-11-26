@@ -2,8 +2,8 @@
 id          = "19842600/umbriel-ribbon"
 name        = "Umbriel Ribbon"
 version     = "1.0.0"
-plugin_api  = 24
-authors     = "AlmostStupid"
+plugin_api  = 28
+authors     = "19842600"
 license     = "MIT"
 icon        = "view-column-symbolic"
 description = "Pure mouse-wheel canvas scrolling for Umbriel via the panel bar."
