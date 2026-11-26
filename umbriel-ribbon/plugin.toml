@@ -1,0 +1,15 @@
+[plugin]
+id = "AlmostStupid/umbriel-ribbon"
+name = "Umbriel Ribbon"
+version = "1.0.0"
+description = "Pure mouse-wheel canvas scrolling for Umbriel via the panel bar."
+authors = "AlmostStupid"
+plugin_api = 28
+
+[entries]
+service = "service.luau"
+bar_widget = "ribbon.luau"
+
+[permissions]
+allow_process_execution = ["umbriel"]
+

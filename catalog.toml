@@ -1,0 +1,10 @@
+[[plugin]]
+id          = "ahmedhossamdev/timezone-hub"
+name        = "Umbriel Ribbon"
+version     = "1.0.0"
+plugin_api  = 24
+authors     = "AlmostStupid"
+license     = "MIT"
+icon        = "view-column-symbolic"
+description = "Pure mouse-wheel canvas scrolling for Umbriel via the panel bar."
+tags        = ["ribbon", "umbriel", "utility"]
